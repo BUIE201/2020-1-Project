@@ -113,11 +113,11 @@ class PlantsGame: public olc::PixelGameEngine {
 
     
     
-    shared_ptr<olc::Sprite> zombieSprite;
-    shared_ptr<olc::Sprite> sunflowerSprite;
-    shared_ptr<olc::Sprite> peashooterSprite;
-    shared_ptr<olc::Sprite> sunSprite;
-    shared_ptr<olc::Sprite> seedSprite;
+    olc::Sprite* zombieSprite;
+    olc::Sprite* sunflowerSprite;
+    olc::Sprite* peashooterSprite;
+    olc::Sprite* sunSprite;
+    olc::Sprite* seedSprite;
 
     
     float spawnCD , spawnRate; //Zombie spawn timers
@@ -150,13 +150,13 @@ public:
         //Initialization for zombies
         spawnCD = 3;
         spawnRate = 5;
-        zombieSprite = make_shared<olc::Sprite>("Sprites/zombie1.png");
+        zombieSprite = new olc::Sprite("Sprites/zombie1.png");
         //Initialization for zombies
 
-        seedSprite = make_shared<olc::Sprite>("Sprites/seed.png");
-        sunSprite = make_shared<olc::Sprite>("Sprites/sun1.png");
-        peashooterSprite = make_shared<olc::Sprite>("Sprites/peashooter1.png");
-        sunflowerSprite = make_shared<olc::Sprite>("Sprites/sunflower1.png");
+        seedSprite = new olc::Sprite("Sprites/seed.png");
+        sunSprite =new olc::Sprite("Sprites/sun1.png");
+        peashooterSprite =new olc::Sprite("Sprites/peashooter1.png");
+        sunflowerSprite =new olc::Sprite("Sprites/sunflower1.png");
         CurrentSun = 100;
         sunflowerCost = 50;
         peashooterCost = 100;
@@ -196,6 +196,12 @@ public:
 
                 if (GetMouse(0).bReleased)
                 {
+                    delete zombieSprite;
+                    delete seedSprite;
+                    delete sunSprite;
+                    delete peashooterSprite;
+                    delete sunflowerSprite;
+
                     return false;
                 }
             }

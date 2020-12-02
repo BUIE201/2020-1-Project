@@ -537,7 +537,7 @@ namespace olc
 		}
 	}
 
-	void PixelGameEngine::DrawSprite(int32_t x, int32_t y, std::shared_ptr<Sprite> sprite, uint32_t scale)
+	void PixelGameEngine::DrawSprite(int32_t x, int32_t y, Sprite* sprite, uint32_t scale)
 	{
 		if (sprite == nullptr)
 			return;
