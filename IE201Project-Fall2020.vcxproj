@@ -142,7 +142,6 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="olcPGEX_Graphics2D.h" />
     <ClInclude Include="olcSimpleEngine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -6,7 +6,6 @@
 //Last Edit Date: 03.02.2020
 
 #include "olcSimpleEngine.h"
-#include "olcPGEX_Graphics2D.h"
 #include "vector"
 
 

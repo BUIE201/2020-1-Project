@@ -23,9 +23,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="olcPGEX_Graphics2D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="olcSimpleEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
