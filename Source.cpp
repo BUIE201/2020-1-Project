@@ -375,6 +375,7 @@ public:
                         a->IsFull = false;
                     }
                 }
+                delete Sunflowers[i];
                 Sunflowers.erase(Sunflowers.begin() + i);
                 i--;
             }
@@ -503,6 +504,7 @@ public:
             for (int i = 0; i < Suns.size();i++) {
                 if (distance(Suns[i]->x + 20, Suns[i]->y+20, GetMouseX(), GetMouseY()) < 20) {
                     CurrentSun += Suns[i]->sungain;
+                    delete Suns[i];
                     Suns.erase(Suns.begin() + i);
                     i--;
                 }
